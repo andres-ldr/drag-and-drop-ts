@@ -249,6 +249,8 @@ class ProjectList
       prjId,
       this.type === 'active' ? ProjectStatus.Active : ProjectStatus.Finished
     );
+    const listEl = this.element.querySelector('ul')!;
+    listEl.classList.remove('droppable');
   }
 
   @autobind
